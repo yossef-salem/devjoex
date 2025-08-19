@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yossef Salem - IT Engineer at vROOT Company & DevOps Enthusiast. Experienced in VMware ESXi, Cisco networking, and cloud technologies.">
+  <meta name="keywords" content="DevOps, IT Engineer, Software Development, Cloud Computing, Infrastructure">
+  <meta name="author" content="Yossef Salem">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="DevJoex - Yossef Salem Portfolio">
+  <meta property="og:description" content="IT Engineer & Aspiring DevOps Engineer Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourusername.github.io/devjoex-portfolio">
+  <meta property="og:image" content="./assets/og-image.jpg">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevJoex - Yossef Salem Portfolio">
+  <meta name="twitter:description" content="IT Engineer & Aspiring DevOps Engineer Portfolio">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  
+  <!-- Manifest -->
+  <link rel="manifest" href="./manifest.json">
+  
+  <title>Yossef Salem</title>
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" href="./assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        window.scrollTo(0, 0);
+      }
+    });
+    window.addEventListener('load', function() {
+      window.scrollTo(0, 0);
+    });
+  </script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <!-- Global animated background orbs -->
+  <div class="global-orb"></div>
+  <div class="global-orb"></div>
+  
+  <!-- Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-container">
+      <div class="loading-logo">
+        <div class="loading-logo-icon">
+          <div class="loading-logo-dot"></div>
+          <div class="loading-logo-ring"></div>
+        </div>
+        <div class="loading-logo-text">
+          <span class="loading-letter" data-letter="D">D</span>
+          <span class="loading-letter" data-letter="e">e</span>
+          <span class="loading-letter" data-letter="v">v</span>
+          <span class="loading-letter" data-letter="J">J</span>
+          <span class="loading-letter" data-letter="o">o</span>
+          <span class="loading-letter" data-letter="e">e</span>
+          <span class="loading-letter" data-letter="x">x</span>
+        </div>
+      </div>
+      <div class="loading-message">
+        <p class="loading-text">Loading amazing things...</p>
+        <div class="loading-dots">
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+          <div class="loading-dot"></div>
+        </div>
+      </div>
+      <div class="loading-progress-container">
+        <div class="loading-progress-bar">
+          <div class="loading-progress-fill"></div>
+        </div>
+        <p class="loading-progress-text">0%</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header__row">
+        <!-- Logo -->
+        <a href="#hero" class="logo" aria-label="DevJoex Home">
+          <div class="logo__icon">
+            <div class="logo__dot"></div>
+            <div class="logo__ring"></div>
+          </div>
+          <span class="logo__text">
+            <span class="logo__dev">Dev</span><span class="logo__joex">Joex</span>
+          </span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+          <button class="nav__toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle navigation menu">
+            <div class="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </button>
+          
+          <ul class="nav__list" id="nav-list">
+            <li><a href="#hero" class="nav__link">Home</a></li>
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#projects" class="nav__link">Portfolio</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+            <li><a href="./assets/resume.pdf" class="nav__link" target="_blank" rel="noopener noreferrer">Resume ↓</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="progress" role="progressbar" aria-label="Page scroll progress">
+    <div class="progress__bar"></div>
+  </div>
+
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+      <div class="hero__bg">
+        <div class="hero__particles">
+          <div class="hero__particle" data-speed="0.5"></div>
+          <div class="hero__particle" data-speed="0.8"></div>
+          <div class="hero__particle" data-speed="1.2"></div>
+          <div class="hero__particle" data-speed="0.6"></div>
+          <div class="hero__particle" data-speed="1.0"></div>
+          <div class="hero__particle" data-speed="0.7"></div>
+        </div>
+        <div class="hero__floating-elements">
+          <div class="hero__float hero__float--1" data-speed="0.3">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div class="hero__float hero__float--2" data-speed="0.5">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M12 1v6m0 6v6"/>
+              <path d="M4.22 4.22l4.24 4.24m6.28 6.28l4.24 4.24"/>
+            </svg>
+          </div>
+          <div class="hero__float hero__float--3" data-speed="0.4">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+            </svg>
+          </div>
+          <div class="hero__float hero__float--4" data-speed="0.6">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <div class="hero__float hero__float--5" data-speed="0.7">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <p class="hero__greeting eyebrow" data-animate="fade-up">
+              <span class="char">H</span>
+              <span class="char">i</span>
+              <span class="char">,</span>
+              <span class="char">&nbsp;</span>
+              <span class="char">I</span>
+              <span class="char">'</span>
+              <span class="char">m</span>
+            </p>
+            
+            <h1 class="hero__title" data-animate="fade-up">
+              <span class="hero__name">Yossef Salem</span>
+            </h1>
+            
+            <p class="hero__subtitle" data-animate="fade-up">
+              <span class="word">IT</span>
+              <span class="word">Engineer</span>
+              <span class="word">@</span>
+              <span class="word">vROOT</span>
+              <span class="word">&</span>
+              <span class="word">Aspiring</span>
+              <span class="word">DevOps</span>
+              <span class="word">Engineer</span>
+            </p>
+            
+            
+            
+            <div class="hero__social" data-animate="fade-up">
+              <a href="mailto:yossef.salem@example.com" class="social-icon" aria-label="Email">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/yossef-salem" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="https://github.com/yossef-salem" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+      </div>
+      
+      <div class="hero__discover">
+        <a href="#projects" class="btn btn--ghost" aria-label="Discover my projects">
+          <span class="btn__text">Discover my projects</span>
+          <svg class="btn__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Animated background particles -->
+      <div class="about__particles">
+        <div class="about__particle"></div>
+        <div class="about__particle"></div>
+        <div class="about__particle"></div>
+        <div class="about__particle"></div>
+      </div>
+      
+      <div class="container">
+
+        
+        <div class="about__grid">
+          <div class="about__visual" data-animate="slide-in-left">
+            <div class="about__image-wrap">
+              <img src="./assets/avatar.png" alt="Yossef Salem" class="about__image about__image--modern" loading="lazy">
+            </div>
+          </div>
+          
+          <div class="about__content" data-animate="slide-in-right">
+            <h2 class="about__title">About Me</h2>
+            <div class="about__description">
+              <p>I started my journey in IT with a passion for building and connecting systems. Today, I work as an IT Engineer at vROOT Company, where I manage Active Directory, ESXi, Cisco devices, and keep inter-branch networks running smoothly. Along the way, I earned certifications in CCNAv7, AWS Cloud Foundation, and MCSA 2019, which deepened my technical foundation.</p>
+              <p>But my story doesn’t stop here. I’m now training with the Digital Egypt Pioneers initiative, focusing on RHEL, automation, cloud, and DevOps practices — shaping the next chapter of my career as I move toward becoming a DevOps Engineer.</p>
+            </div>
+            
+            <div class="about__tabs">
+              <div class="about__tab-buttons">
+                <button class="about__tab-btn about__tab-btn--active" data-tab="skills">Skills</button>
+                <button class="about__tab-btn" data-tab="experience">Experience</button>
+                <button class="about__tab-btn" data-tab="education">Education</button>
+              </div>
+              
+              <div class="about__tab-content">
+                <div class="about__tab-panel about__tab-panel--active" data-tab="skills">
+                  <div class="about__skills">
+                    <div class="about__skill-category">
+                      <h4>Technical Skills</h4>
+                      <p>VMware ESXi, RHEL, Windows Server, Scripting, Docker, NGINX, AWS Cloud, Cisco Routing & Switching, Help Desk Support</p>
+                    </div>
+                    <div class="about__skill-category">
+                      <h4>Tools & IDEs</h4>
+                      <p>VMware, Git & GitHub, Bash, Putty, WinSCP, VSCode, AWS Management Console, Anydesk</p>
+                    </div>
+                    <div class="about__skill-category">
+                      <h4>Soft Skills</h4>
+                      <p>Problem-Solving, Teamwork, Communication, Work under pressure, Continuous Learning</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="about__tab-panel" data-tab="experience">
+                  <div class="about__experience">
+                    <div class="about__exp-category">
+                      <h4>IT Engineer @vROOT</h4>
+                      <p>Jul 2025 - Current</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="about__tab-panel" data-tab="education">
+                  <div class="about__education">
+                    <div class="about__edu-category">
+                      <h4>Damietta University</h4>
+                      <p>Sep 2021 - Jul 2025</p>
+                      <p>B.Sc degree in Computer Science and AI.</p>
+                      <p>Information Technology department.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <!-- Animated background particles -->
+      <div class="projects__particles">
+        <div class="projects__particle"></div>
+        <div class="projects__particle"></div>
+        <div class="projects__particle"></div>
+        <div class="projects__particle"></div>
+      </div>
+      
+      <div class="container">
+        <div class="section__header" data-animate="fade-up">
+          <h2 class="section__title">Featured Projects</h2>
+          <p class="section__subtitle">Some of my recent work and contributions</p>
+        </div>
+        
+        <div class="projects__grid" data-animate="grid">
+          <article class="project" data-animate="fade-up">
+            <div class="project__header">
+              <div class="project__badge">DevOps</div>
+              <h3 class="project__title">Infrastructure Automation</h3>
+            </div>
+            <p class="project__description">Automated infrastructure provisioning using Terraform and Ansible for scalable cloud deployments.</p>
+            <ul class="project__tags">
+              <li>Terraform</li>
+              <li>Ansible</li>
+              <li>AWS</li>
+              <li>Docker</li>
+            </ul>
+            <div class="project__actions">
+              <a href="#" class="btn btn--tiny">View Project</a>
+              <a href="#" class="btn btn--tiny btn--ghost">Source Code</a>
+            </div>
+          </article>
+          
+          <article class="project" data-animate="fade-up">
+            <div class="project__header">
+              <div class="project__badge">Cloud</div>
+              <h3 class="project__title">Container Orchestration</h3>
+            </div>
+            <p class="project__description">Implemented Kubernetes clusters with monitoring and logging solutions for production workloads.</p>
+            <ul class="project__tags">
+              <li>Kubernetes</li>
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>Helm</li>
+            </ul>
+            <div class="project__actions">
+              <a href="#" class="btn btn--tiny">View Project</a>
+              <a href="#" class="btn btn--tiny btn--ghost">Source Code</a>
+            </div>
+          </article>
+          
+          <article class="project" data-animate="fade-up">
+            <div class="project__header">
+              <div class="project__badge">CI/CD</div>
+              <h3 class="project__title">Pipeline Automation</h3>
+            </div>
+            <p class="project__description">Built comprehensive CI/CD pipelines with automated testing, building, and deployment processes.</p>
+            <ul class="project__tags">
+              <li>Jenkins</li>
+              <li>GitLab CI</li>
+              <li>Docker</li>
+              <li>SonarQube</li>
+            </ul>
+            <div class="project__actions">
+              <a href="#" class="btn btn--tiny">View Project</a>
+              <a href="#" class="btn btn--tiny btn--ghost">Source Code</a>
+            </div>
+          </article>
+          
+          <article class="project" data-animate="fade-up">
+            <div class="project__header">
+              <div class="project__badge">Monitoring</div>
+              <h3 class="project__title">Observability Stack</h3>
+            </div>
+            <p class="project__description">Designed and implemented comprehensive monitoring and alerting systems for infrastructure and applications.</p>
+            <ul class="project__tags">
+              <li>Prometheus</li>
+              <li>Grafana</li>
+              <li>AlertManager</li>
+              <li>ELK Stack</li>
+            </ul>
+            <div class="project__actions">
+              <a href="#" class="btn btn--tiny">View Project</a>
+              <a href="#" class="btn btn--tiny btn--ghost">Source Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact-section" aria-labelledby="contact-title">
+      <!-- Animated background -->
+      <div class="contact__bg">
+        <div class="contact__bg-circle contact__bg-circle--1"></div>
+        <div class="contact__bg-circle contact__bg-circle--2"></div>
+        <div class="contact__bg-circle contact__bg-circle--3"></div>
+        <div class="contact__bg-particles">
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+          <div class="particle"></div>
+        </div>
+      </div>
+      
+      <div class="container">
+        <header class="section__header" data-animate="fade-up">
+          <h2 id="contact-title" class="section__title">Contact Me</h2>
+          <p class="section__subtitle">Let's work together! Send me a message and I'll get back to you soon.</p>
+        </header>
+
+        <div class="contact__container">
+          <form id="contact-form" class="contact__form" action="https://formspree.io/f/xdkdreqd" method="POST" novalidate data-animate="fade-up">
+            <div class="contact__field">
+              <div class="field__wrapper">
+                <input id="name" name="name" autocomplete="name" required placeholder=" " />
+                <label for="name">Your Name</label>
+                <div class="field__line"></div>
+              </div>
+              <span class="error" aria-live="polite"></span>
+            </div>
+
+            <div class="contact__field">
+              <div class="field__wrapper">
+                <input id="email" name="email" type="email" autocomplete="email" required placeholder=" " />
+                <label for="email">Your Email</label>
+                <div class="field__line"></div>
+              </div>
+              <span class="error" aria-live="polite"></span>
+            </div>
+
+            <div class="contact__field">
+              <div class="field__wrapper">
+                <textarea id="message" name="message" rows="5" minlength="10" required placeholder=" "></textarea>
+                <label for="message">Your Message</label>
+                <div class="field__line"></div>
+              </div>
+              <span class="error" aria-live="polite"></span>
+            </div>
+
+            <!-- Hidden field for Formspree -->
+            <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
+            <input type="hidden" name="_next" value="https://yossef-salem.github.io/devjoex/thanks.html">
+
+            <div class="contact__actions">
+              <button class="btn btn--primary contact__submit" type="submit">
+                <span>Send Message</span>
+                <svg class="btn__icon" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__name">
+          <span class="logo__dev">Dev</span><span class="logo__joex">Joex</span>
+        </div>
+        <div class="social">
+          <a href="mailto:yossef.salem@example.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/yossef-salem" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://github.com/yossef-salem" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; <span id="current-year"></span> Yossef Salem. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
