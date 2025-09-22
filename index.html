@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yossef Salem</title>
+  <meta name="description" content="Yossef Salem - IT Engineer at vROOT & Aspiring DevOps Engineer. Portfolio showcasing skills, projects, and contact.">
+  <meta name="keywords" content="DevOps, IT Engineer, Cloud, Infrastructure, Portfolio, Yossef Salem, vROOT">
+  <meta name="author" content="Yossef Salem">
+  <link rel="canonical" href="https://yossef-salem.github.io/devOne/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DevJoex - Yossef Salem Portfolio">
+  <meta property="og:description" content="IT Engineer & Aspiring DevOps Engineer Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yossef-salem.github.io/devOne/">
+  <meta property="og:image" content="./assets/avatar.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DevJoex - Yossef Salem Portfolio">
+  <meta name="twitter:description" content="IT Engineer & Aspiring DevOps Engineer Portfolio">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bg: { primary: '#0a0a0a', secondary: '#111111', panel: 'rgba(255,255,255,0.05)' },
+            textc: { primary: '#ffffff', secondary: 'rgba(255,255,255,0.8)', muted: 'rgba(255,255,255,0.6)' },
+            accent: { primary: '#7C3AED', secondary: '#8B5CF6', tertiary: '#A78BFA' },
+            borderc: { primary: 'rgba(255,255,255,0.1)' }
+          },
+          boxShadow: {
+            glass: '0 10px 30px rgba(0,0,0,0.25)'
+          },
+          backgroundImage: {
+            'purple-gradient': 'linear-gradient(135deg, #7C3AED, #8B5CF6)'
+          }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Minimal custom CSS for effects not covered by utilities -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-bg-primary text-textc-primary antialiased selection:bg-accent-primary/20 selection:text-white">
+  <!-- Splash Screen -->
+  <div id="splashScreen" class="splash-screen">
+    <div class="splash-content">
+      <div class="splash-logo">
+        <span class="splash-logo-icon">
+          <span class="splash-dot"></span>
+          <span class="splash-ring"></span>
+        </span>
+        <span class="splash-text">
+          <span class="text-accent-primary">Dev</span><span>Joex</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global animated orbs -->
+  <div class="global-orb" aria-hidden="true"></div>
+  <div class="global-orb" aria-hidden="true"></div>
+
+  <!-- Skip to main content -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Progress Bar -->
+  <div class="fixed top-0 left-0 w-full h-[3px] z-[1030] bg-transparent" role="progressbar" aria-label="Page scroll progress">
+    <div id="progressBar" class="h-full w-0 bg-purple-gradient transition-[width] duration-150"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-[1030] backdrop-blur bg-black/70 border-b border-borderc-primary" role="banner">
+    <div class="max-w-[1200px] mx-auto px-4">
+      <div class="flex items-center justify-between py-4 px-2">
+        <a href="#hero" class="flex items-center gap-3" aria-label="DevJoex Home">
+          <span class="relative inline-block w-8 h-8">
+            <span class="absolute inset-0 m-auto w-2.5 h-2.5 rounded-full bg-accent-primary animate-pulse"></span>
+            <span class="absolute inset-0 m-auto w-6 h-6 rounded-full border-2 border-accent-primary animate-spin-slow"></span>
+          </span>
+          <span class="font-bold text-base"><span class="text-accent-primary">Dev</span><span>Joex</span></span>
+        </a>
+
+        <nav class="flex items-center" role="navigation" aria-label="Main navigation">
+          <button id="navToggle" class="inline-grid place-items-center w-6 h-5 rounded-md md:hidden ml-2 mt-1" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation menu">
+            <span class="sr-only">Menu</span>
+            <span class="block w-full h-[2px] bg-white"></span>
+            <span class="block w-full h-[2px] bg-white mt-[6px]"></span>
+            <span class="block w-full h-[2px] bg-white mt-[6px]"></span>
+          </button>
+          <ul id="navList" class="hidden md:flex items-center gap-6 list-none">
+            <li><a class="nav-link" href="#hero">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#projects">Portfolio</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+            <li><a class="nav-link" href="./assets/resume.pdf" target="_blank" rel="noopener noreferrer">Resume ↓</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden fixed left-1/2 -translate-x-1/2 top-[80px] w-[92%] max-w-[520px] opacity-0 invisible transition-all duration-300"></div>
+  </header>
+
+  <!-- Main -->
+  <main id="main" role="main" class="pt-0">
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-br from-bg-primary to-bg-secondary"></div>
+      <div class="absolute inset-0 -z-10" aria-hidden="true">
+        <div class="hero__particles">
+          <div class="hero__particle" data-speed="0.5"></div>
+          <div class="hero__particle" data-speed="0.8"></div>
+          <div class="hero__particle" data-speed="1.2"></div>
+          <div class="hero__particle" data-speed="0.6"></div>
+          <div class="hero__particle" data-speed="1.0"></div>
+          <div class="hero__particle" data-speed="0.7"></div>
+        </div>
+      </div>
+
+      <div class="max-w-[1200px] mx-auto px-4">
+        <div class="flex flex-col items-center gap-6 text-center">
+          <p class="hero-greeting uppercase tracking-widest text-textc-muted">
+            <span class="inline-block">Hi, I'm</span>
+          </p>
+          <h1 class="hero-name text-5xl sm:text-6xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent">
+            Yossef Salem
+          </h1>
+          <p class="hero-title text-lg sm:text-xl text-textc-secondary">
+            IT Engineer @ vROOT & Aspiring DevOps Engineer
+          </p>
+          <div class="hero-social flex gap-4">
+            <a href="mailto:yossefsalem.dev@gmail.com" class="social-icon" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </a>
+            <a href="https://linkedin.com/in/yossef-salem" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com/yossef-salem" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="absolute bottom-10 left-0 right-0 flex justify-center">
+          <a href="#projects" class="discover-btn" aria-label="Discover my projects">
+            <span>Discover my projects</span>
+            <svg class="ml-2" width="20" height="20" viewBox="0 0 24 24" fill="none"><polyline points="6 9 12 15 18 9" stroke="currentColor" stroke-width="2"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="relative py-16 overflow-hidden">
+      <div class="max-w-[1200px] mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+          <div class="relative">
+            <div class="about__image-wrap rounded-2xl overflow-hidden shadow-2xl">
+              <img src="./assets/avatar.png" alt="Yossef Salem" class="about__image about__image--modern" loading="lazy" decoding="async">
+              <div class="about__image-bar" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="animate-on-scroll delay-200">
+            <h2 class="text-3xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent mb-4">About Me</h2>
+            <div class="space-y-4 text-textc-secondary">
+              <p>I started my journey in IT with a passion for building and connecting systems. Today, I work as an IT Engineer at vROOT Company, where I manage Active Directory, ESXi, Cisco devices, and keep inter-branch networks running smoothly. Along the way, I earned certifications in CCNAv7, AWS Cloud Foundation, and MCSA 2019.</p>
+              <p>I’m training with the Digital Egypt Pioneers initiative, focusing on RHEL, automation, cloud, and DevOps practices — shaping the next chapter of my career toward DevOps.</p>
+            </div>
+
+            <div class="mt-8">
+              <div class="about__tab-buttons mb-4 overflow-x-auto no-scrollbar" role="tablist" aria-label="About Tabs">
+                <button class="about__tab-btn about__tab-btn--active" data-tab="skills" role="tab" aria-selected="true">Skills</button>
+                <button class="about__tab-btn" data-tab="experience" role="tab" aria-selected="false">Experience</button>
+                <button class="about__tab-btn" data-tab="education" role="tab" aria-selected="false">Education</button>
+              </div>
+              <div class="min-h-[200px]">
+                <div class="about__tab-panel about__tab-panel--active" data-tab="skills">
+                  <div class="grid gap-4">
+                    <div>
+                      <h4 class="text-accent-primary mb-1 font-semibold">Technical Skills</h4>
+                      <p class="text-textc-secondary">VMware ESXi, RHEL, Windows Server, Scripting, Docker, NGINX, AWS Cloud, Cisco Routing & Switching, Help Desk Support</p>
+                    </div>
+                    <div>
+                      <h4 class="text-accent-primary mb-1 font-semibold">Tools & IDEs</h4>
+                      <p class="text-textc-secondary">VMware, Git & GitHub, Bash, Putty, WinSCP, VSCode, AWS Console, Anydesk</p>
+                    </div>
+                    <div>
+                      <h4 class="text-accent-primary mb-1 font-semibold">Soft Skills</h4>
+                      <p class="text-textc-secondary">Problem-Solving, Teamwork, Communication, Work under pressure, Continuous Learning</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="about__tab-panel" data-tab="experience">
+                  <div class="grid gap-4">
+                    <div class="experience-card">
+                      <div class="flex items-start justify-between mb-3">
+                        <div>
+                          <h4 class="text-accent-primary mb-1 font-semibold">IT Engineer @vROOT</h4>
+                          <p class="text-textc-secondary">Jul 2025 - Present</p>
+                        </div>
+                        <button class="experience-modal-btn" data-target="vroot-experience">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15,3 21,3 21,9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                          </svg>
+                          See Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about__tab-panel" data-tab="education">
+                  <div class="grid gap-4">
+                    <div>
+                      <h4 class="text-accent-primary mb-1 font-semibold">Damietta University</h4>
+                      <p class="text-textc-secondary">Sep 2021 - Jul 2025</p>
+                      <p class="text-textc-secondary">B.Sc degree in Computer Science and AI. Information Technology department.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="relative py-16 overflow-hidden">
+      <div class="projects__bg" aria-hidden="true">
+        <div class="projects__bg-circle projects__bg-circle--1"></div>
+        <div class="projects__bg-circle projects__bg-circle--2"></div>
+        <div class="projects__bg-circle projects__bg-circle--3"></div>
+        <div class="projects__bg-particles">
+          <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+          <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        </div>
+      </div>
+      <div class="max-w-[1200px] mx-auto px-4">
+        <header class="text-center mb-16 relative z-10 animate-on-scroll">
+          <h2 class="text-3xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent mb-2">Featured Projects</h2>
+          <p class="text-textc-muted max-w-[70ch] mx-auto">Some of my recent work and contributions</p>
+        </header>
+        <div class="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 relative z-10">
+          <article class="project animate-on-scroll delay-100" data-project="restaurant-network">
+            <div class="mb-3"><span class="inline-block text-white bg-accent-primary text-xs font-medium px-2 py-1 rounded-lg">IT</span></div>
+            <h3 class="text-xl font-semibold mb-2">Restaurant Network Infrastructure</h3>
+            <p class="text-textc-secondary mb-4">Implemented and wired a rack setup with Cisco router, switches, and servers, ensuring structured cabling and reliable connectivity.</p>
+            <ul class="flex flex-wrap gap-2 mb-4">
+              <li class="tag">Cisco Networking</li><li class="tag">ESXi</li><li class="tag">Windows server</li>
+            </ul>
+            <div class="flex gap-2 flex-wrap">
+              <button class="btn-small project-modal-btn" data-target="restaurant-network">View Project</button>
+              <a href="https://github.com/yossef-salem/networks" class="btn-small btn-ghost" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </div>
+          </article>
+
+          <article class="project animate-on-scroll delay-200">
+            <div class="mb-3"><span class="inline-block text-white bg-accent-primary text-xs font-medium px-2 py-1 rounded-lg">Cloud</span></div>
+            <h3 class="text-xl font-semibold mb-2">Container Orchestration</h3>
+            <p class="text-textc-secondary mb-4">Implemented Kubernetes clusters with monitoring and logging solutions for production workloads.</p>
+            <ul class="flex flex-wrap gap-2 mb-4">
+              <li class="tag">Kubernetes</li><li class="tag">Prometheus</li><li class="tag">Grafana</li><li class="tag">Helm</li>
+            </ul>
+            <div class="flex gap-2 flex-wrap">
+              <a href="#" class="btn-small">Soon</a>
+              <a href="#" class="btn-small btn-ghost">Source Code</a>
+            </div>
+          </article>
+
+          <article class="project animate-on-scroll delay-300">
+            <div class="mb-3"><span class="inline-block text-white bg-accent-primary text-xs font-medium px-2 py-1 rounded-lg">CI/CD</span></div>
+            <h3 class="text-xl font-semibold mb-2">Pipeline Automation</h3>
+            <p class="text-textc-secondary mb-4">Built comprehensive CI/CD pipelines with automated testing, building, and deployment processes.</p>
+            <ul class="flex flex-wrap gap-2 mb-4">
+              <li class="tag">Jenkins</li><li class="tag">GitLab CI</li><li class="tag">Docker</li><li class="tag">SonarQube</li>
+            </ul>
+            <div class="flex gap-2 flex-wrap">
+              <a href="#" class="btn-small">Soon</a>
+              <a href="#" class="btn-small btn-ghost">Source Code</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="relative py-16 overflow-hidden" aria-labelledby="contact-title">
+      <div class="contact__bg" aria-hidden="true">
+        <div class="contact__bg-circle contact__bg-circle--1"></div>
+        <div class="contact__bg-circle contact__bg-circle--2"></div>
+        <div class="contact__bg-circle contact__bg-circle--3"></div>
+        <div class="contact__bg-particles">
+          <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+          <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+        </div>
+      </div>
+
+      <div class="max-w-[1200px] mx-auto px-4">
+        <header class="text-center mb-10 animate-on-scroll">
+          <h2 id="contact-title" class="text-3xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent mb-2">Contact Me</h2>
+          <p class="text-textc-muted">Let's work together! Send me a message and I'll get back to you soon.</p>
+        </header>
+
+        <div class="relative z-10 max-w-2xl mx-auto">
+          <div class="modern-contact-form animate-on-scroll delay-200">
+            <form id="contact-form" action="https://formspree.io/f/xdkdreqd" method="POST" novalidate>
+              <div class="form-container">
+                <div class="form-field">
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    class="modern-input" 
+                    placeholder=" "
+                    required
+                  />
+                  <label for="name" class="modern-label">Your Name</label>
+                  <div class="field-line"></div>
+                </div>
+
+                <div class="form-field">
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    class="modern-input" 
+                    placeholder=" "
+                    required
+                  />
+                  <label for="email" class="modern-label">Your Email</label>
+                  <div class="field-line"></div>
+                </div>
+
+                <div class="form-field">
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    class="modern-textarea" 
+                    rows="6"
+                    placeholder=" "
+                    required
+                  ></textarea>
+                  <label for="message" class="modern-label">Your Message</label>
+                  <div class="field-line"></div>
+                </div>
+
+                <input type="hidden" name="_subject" value="New Contact Message from Portfolio">
+                <input type="hidden" name="_next" value="./thanks.html">
+
+                <button type="submit" class="modern-submit-btn">
+                  <span class="btn-text">Send Message</span>
+                  <div class="btn-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"/>
+                    </svg>
+                  </div>
+                  <div class="btn-shimmer"></div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="relative bg-black/20 backdrop-blur-md border-t border-white/10 py-8 text-center" role="contentinfo">
+    <div class="max-w-[1200px] mx-auto px-4">
+      <!-- Logo Section -->
+      <div class="mb-6">
+        <div class="footer-logo">
+          <span class="text-accent-primary">Dev</span><span>Joex</span>
+        </div>
+      </div>
+      
+      <!-- Social Icons -->
+      <div class="flex justify-center gap-4 mb-6">
+        <a href="mailto:yossefsalem.dev@gmail.com" class="footer-social-icon" aria-label="Email">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </a>
+        <a href="https://linkedin.com/in/yossef-salem" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+        </a>
+        <a href="https://github.com/yossef-salem" class="footer-social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-borderc-primary pt-4">
+        <p class="text-textc-muted text-sm">&copy; <span id="current-year"></span> Yossef Salem. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="project-modal__overlay"></div>
+    <div class="project-modal__container">
+      <div class="project-modal__content">
+        <!-- Close Button -->
+        <button class="project-modal__close" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        
+        <!-- Modal Content -->
+        <div class="project-modal__body">
+          <header class="project-modal__header">
+            <div class="mb-4">
+              <span class="inline-block text-white bg-accent-primary text-xs font-medium px-3 py-1.5 rounded-lg">IT</span>
+            </div>
+            <h2 id="modalTitle" class="text-3xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent mb-4">Restaurant Network Infrastructure</h2>
+           
+          </header>
+          
+          <div class="project-modal__details">
+            <div class="space-y-8">
+              <!-- Overview -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                  Overview
+                </h3>
+                <p class="text-textc-secondary leading-relaxed">
+                  Designed and implemented the network and communication infrastructure for a restaurant, including a Cisco router, 4 internet routers, switches, and a server. The project covered structured cabling, network connectivity, Wi-Fi coverage, IP telephony, and printer distribution across all departments, and integrated secure branch connectivity using SoftEther VPN.
+                </p>
+              </section>
+              
+              <!-- My Role -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  My Role
+                </h3>
+                <ul class="space-y-3 text-textc-secondary">
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Collaborated with my team to configure Cisco switches and router.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Independently configured and installed all Cisco CP-7942 IP Phones across restaurant sections, enabling seamless internal communication.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Installed a PVDM module in the Cisco router to support voice processing and IP telephony services.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Assisted in configuring and deploying 5 Cisco Access Points to ensure full Wi-Fi coverage across the restaurant.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Independently configured and distributed all HPRT network printers, including driver installation and integration with cashier PCs.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Contributed to the configuration of the main internet router and other internet routers to match our requirements.</span>
+                  </li>
+                </ul>
+              </section>
+              
+              <!-- Technologies & Tools -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  Technologies & Tools
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                  <span class="tag">Cisco Routing & Switching</span>
+                  <span class="tag">Cisco IP Phones</span>
+                  <span class="tag">Wireless Access Points</span>
+                  <span class="tag">Structured Cabling</span>
+                  <span class="tag">Network Printers</span>
+                  <span class="tag">ESXi</span>
+                  <span class="tag">Windows server</span>
+                </div>
+              </section>
+            </div>
+          </div>
+          
+          <footer class="project-modal__footer">
+            <div class="flex gap-4">
+              <a href="https://github.com/yossef-salem/networks" class="btn-primary" target="_blank" rel="noopener noreferrer">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-1.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                View Source Code
+              </a>
+              <button class="btn-ghost project-modal__close-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                Close
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience Modal -->
+  <div id="experienceModal" class="experience-modal" role="dialog" aria-modal="true" aria-labelledby="experienceModalTitle" aria-hidden="true">
+    <div class="experience-modal__overlay"></div>
+    <div class="experience-modal__container">
+      <div class="experience-modal__content">
+        <!-- Close Button -->
+        <button class="experience-modal__close" aria-label="Close modal">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+        
+        <!-- Modal Content -->
+        <div class="experience-modal__body">
+          <header class="experience-modal__header">
+            <div class="mb-4">
+              <span class="inline-block text-white bg-accent-primary text-xs font-medium px-3 py-1.5 rounded-lg">IT Engineer</span>
+            </div>
+            <h2 id="experienceModalTitle" class="text-3xl font-bold bg-gradient-to-br from-white to-accent-primary bg-clip-text text-transparent mb-2">IT Engineer @ vROOT</h2>
+            <p class="text-textc-secondary">Jul 2025 - Present</p>
+          </header>
+          
+          <div class="experience-modal__details">
+            <div class="space-y-8">
+              <!-- Overview -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                  </svg>
+                  Role Overview
+                </h3>
+                <p class="text-textc-secondary leading-relaxed">
+                  As an IT Engineer at vROOT, an IT solutions company, I support the implementation and maintenance of IT infrastructure and networking projects for clients. My role focuses on setup, monitoring, and troubleshooting of systems, while gaining hands-on experience with enterprise technologies.                </p>
+              </section>
+              
+              <!-- Key Responsibilities -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                  Key Responsibilities
+                </h3>
+                <ul class="space-y-3 text-textc-secondary">
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Configure, install, and troubleshoot Cisco network devices (routers, switches, telephones, access points) to meet client requirements.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Deploy and maintain virtual machines, manage RAID configurations, and configure virtual networks within VMware ESXi.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Manage and maintain Active Directory infrastructure for user authentication and access control, configure RDP access, and set up secure file sharing with proper permissions and policies.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Configure and troubleshoot network printers across departments, ensuring connectivity, driver setup, and user access.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Install and troubleshoot analog and digital surveillance cameras, ensuring proper integration with client infrastructure.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Provide professional end-user support, including setup, configuration, and troubleshooting.</span>
+                  </li>
+                </ul>
+              </section>
+            
+
+              <!-- Achievements -->
+              <section>
+                <h3 class="text-xl font-semibold text-accent-primary mb-4 flex items-center gap-2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                    <path d="M4 22h16"></path>
+                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21l-1.5.5c-.5.17-1.03.17-1.53 0l-1.5-.5A1.25 1.25 0 0 1 4 17v-2.34"></path>
+                    <path d="M20 14.66V17c0 .55.47.98.97 1.21l1.5.5c.5.17 1.03.17 1.53 0l1.5-.5A1.25 1.25 0 0 0 20 17v-2.34"></path>
+                    <path d="M12 14.66V17c0 .55.47.98.97 1.21l1.5.5c.5.17 1.03.17 1.53 0l1.5-.5A1.25 1.25 0 0 0 12 17v-2.34"></path>
+                  </svg>
+                  Key Achievements
+                </h3>
+                <ul class="space-y-3 text-textc-secondary">
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Contributed to the Babelhara Restaurant infrastructure project, including structured cabling, Cisco router/switch setup, and deployment of Cisco IP phones and access points.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Effectively resolved challenging technical issues by applying strong problem-solving skills and initiative</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <svg class="text-accent-primary mt-1.5 w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Gained significant technical knowledge in a short period of time, quickly adapting to new technologies and project requirements.</span>
+                  </li>
+                </ul>
+              </section>
+            </div>
+          </div>
+          
+          <footer class="experience-modal__footer">
+            <div class="flex gap-4">
+              <button class="btn-ghost experience-modal__close-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                Close
+              </button>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./js/script.js" defer></script>
+  
+  <!-- Contact Form Validation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
+
+      // Form submission validation
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        let isValid = true;
+        
+        // Clear all previous validation states
+        clearValidationStates();
+        
+        // Validate name
+        if (!nameInput.value.trim()) {
+          showValidationError(nameInput, 'Name is required');
+          isValid = false;
+        } else if (nameInput.value.trim().length < 2) {
+          showValidationError(nameInput, 'Name must be at least 2 characters');
+          isValid = false;
+        } else {
+          showValidationSuccess(nameInput);
+        }
+        
+        // Validate email
+        if (!emailInput.value.trim()) {
+          showValidationError(emailInput, 'Email is required');
+          isValid = false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+          showValidationError(emailInput, 'Please enter a valid email address');
+          isValid = false;
+        } else {
+          showValidationSuccess(emailInput);
+        }
+        
+        // Validate message
+        if (!messageInput.value.trim()) {
+          showValidationError(messageInput, 'Message is required');
+          isValid = false;
+        } else if (messageInput.value.trim().length < 10) {
+          showValidationError(messageInput, 'Message must be at least 10 characters');
+          isValid = false;
+        } else {
+          showValidationSuccess(messageInput);
+        }
+        
+        if (isValid) {
+          // If validation passes, submit the form
+          form.submit();
+        }
+      });
+
+      // Clear validation on input
+      [nameInput, emailInput, messageInput].forEach(input => {
+        input.addEventListener('input', function() {
+          clearValidationState(this);
+        });
+      });
+
+      function showValidationError(input, message) {
+        const field = input.parentNode;
+        field.classList.add('error');
+        field.classList.remove('success');
+        
+        // Create or update error message
+        let errorMsg = field.querySelector('.validation-message');
+        if (!errorMsg) {
+          errorMsg = document.createElement('div');
+          errorMsg.className = 'validation-message error-message';
+          field.appendChild(errorMsg);
+        }
+        errorMsg.textContent = message;
+      }
+
+      function showValidationSuccess(input) {
+        const field = input.parentNode;
+        field.classList.add('success');
+        field.classList.remove('error');
+        
+        // Remove error message if exists
+        const errorMsg = field.querySelector('.validation-message');
+        if (errorMsg) {
+          errorMsg.remove();
+        }
+      }
+
+      function clearValidationState(input) {
+        const field = input.parentNode;
+        field.classList.remove('error', 'success');
+        const errorMsg = field.querySelector('.validation-message');
+        if (errorMsg) {
+          errorMsg.remove();
+        }
+      }
+
+      function clearValidationStates() {
+        [nameInput, emailInput, messageInput].forEach(input => {
+          clearValidationState(input);
+        });
+      }
+
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
